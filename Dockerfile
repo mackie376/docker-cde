@@ -19,6 +19,7 @@ ARG RIPGREP_VER=14.1.0
 ARG STARSHIP_VER=1.18.2
 
 ENV \
+  TERM=xterm-256color \
   PATH="/root/.local/bin:/opt/nvim-linux64/bin:$PATH" \
   LANGUAGE=en_US.UTF-8 \
   LC_ALL=en_US.UTF-8
