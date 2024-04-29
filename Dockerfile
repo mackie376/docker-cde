@@ -14,7 +14,6 @@ ARG GITHUB_CLI_VER=2.48.0
 ARG HEXYL_VER=0.14.0
 ARG LAZYGIT_VER=0.41.0
 ARG NEOVIM_VER=0.9.5
-ARG PNPM_VER=9.0.6
 ARG RIPGREP_VER=14.1.0
 ARG STARSHIP_VER=1.18.2
 
@@ -72,7 +71,6 @@ RUN \
   -O https://github.com/neovim/neovim/releases/download/v${NEOVIM_VER}/nvim-linux64.tar.gz \
   -O https://github.com/BurntSushi/ripgrep/releases/download/${RIPGREP_VER}/ripgrep-${RIPGREP_VER}-x86_64-unknown-linux-musl.tar.gz \
   -O https://github.com/starship/starship/releases/download/v${STARSHIP_VER}/starship-x86_64-unknown-linux-musl.tar.gz \
-  -o /usr/local/bin/pnpm https://github.com/pnpm/pnpm/releases/download/v9.0.6/pnpm-linux-x64 \
   -o /usr/local/bin/fzf-tmux https://raw.githubusercontent.com/junegunn/fzf/master/bin/fzf-tmux && \
   dpkg -i \
   bat-musl_${BAT_VER}_amd64.deb \

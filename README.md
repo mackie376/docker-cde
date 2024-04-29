@@ -40,7 +40,6 @@ docker run -it --rm -e TZ=Asia/Tokyo cde:latest
 - hexyl@0.14.0
 - lazygit@0.41.0
 - neovim@0.9.5
-- pnpm@9.0.6
 - ripgrep@14.1.0
 - starship@1.18.2
 - mise
