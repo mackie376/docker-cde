@@ -28,7 +28,6 @@ COPY "${PWD}/conf.d/btop/" /root/.config/btop/
 COPY "${PWD}/conf.d/lazygit/" /root/.config/lazygit/
 COPY "${PWD}/conf.d/nvim/" /root/.config/nvim/
 COPY "${PWD}/conf.d/zsh/" /root/.config/zsh/
-COPY "${PWD}/conf.d/starship.toml" /root/.config/starship.toml
 COPY "${PWD}/conf.d/.zshenv" /root/.zshenv
 COPY "${PWD}/bin/*" /root/.local/bin/
 

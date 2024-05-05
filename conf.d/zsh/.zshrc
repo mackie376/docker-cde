@@ -118,8 +118,3 @@ alias e="$EDITOR"
 
 ## remove duplicate value
 typeset -gU path fpath manpath
-
-# ## run 'NeoFetch'
-# if (( ${+commands[neofetch]} )); then
-#   neofetch
-# fi
