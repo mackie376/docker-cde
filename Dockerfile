@@ -44,6 +44,8 @@ RUN \
   gnupg \
   jq \
   locales \
+  luarocks \
+  libicu-dev \
   make \
   openssl \
   rsync \

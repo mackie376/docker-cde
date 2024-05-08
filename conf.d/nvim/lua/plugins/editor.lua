@@ -56,6 +56,7 @@ return {
       "nvim-telescope/telescope-file-browser.nvim",
     },
     keys = {
+      { "<Leader>fJ", file_browser, desc = "Open File Browser (root dir)" },
       {
         "<Leader>fP",
         function()
@@ -65,9 +66,8 @@ return {
         end,
         desc = "Find Plugin File",
       },
-      { "<Leader>fj", file_browser, desc = "Open File Browser (root dir)" },
       {
-        "<Leader>fJ",
+        "<Leader>fj",
         function()
           file_browser({
             path = "%:p:h",
