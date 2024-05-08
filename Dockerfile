@@ -6,11 +6,11 @@ WORKDIR /root
 
 ARG BAT_VER=0.24.0
 ARG DELTA_VER=0.17.0
-ARG EZA_VER=0.18.13
-ARG FD_VER=9.0.0
-ARG FZF_VER=0.51.0
+ARG EZA_VER=0.18.14
+ARG FD_VER=10.1.0
+ARG FZF_VER=0.52.0
 ARG GHQ_VER=1.6.1
-ARG GITHUB_CLI_VER=2.49.0
+ARG GITHUB_CLI_VER=2.49.1
 ARG HEXYL_VER=0.14.0
 ARG LAZYGIT_VER=0.41.0
 ARG NEOVIM_VER=0.9.5
@@ -89,9 +89,7 @@ RUN \
   rm -f *.deb *.tar.gz *.zip && \
   chown root:root /usr/local/bin/* && \
   chmod +x /usr/local/bin/* && \
-  curl https://mise.run | sh
-
-RUN \
+  curl https://mise.run | sh && \
   chown -R root:root /root/.config && \
   bat cache --build && \
   nvim --headless "+Lazy! sync" +qa && \
