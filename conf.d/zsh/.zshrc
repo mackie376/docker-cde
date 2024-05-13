@@ -27,6 +27,12 @@ path=(
   $path
 )
 
+# -- powerlevel10k ---------------------------------------------------------
+
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # -- basic options ---------------------------------------------------------
 
 ## enable vi-mode
@@ -82,12 +88,15 @@ source "${ZIM_HOME}/init.zsh"
 ZSH_AUTOSUGGEST_MANUAL_REBLEND=1
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#666"
 
-# fzf
+## fzf
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=fg:#c0caf5,bg:-1,hl:#ff9e64 \
   --color=fg+:#c0caf5,bg:-1,hl+:#ff9e64 \
   --color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
   --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
+
+## powerlevel10k
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # -- load 'widgets' --------------------------------------------------------
 
@@ -118,3 +127,4 @@ alias e="$EDITOR"
 
 ## remove duplicate value
 typeset -gU path fpath manpath
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

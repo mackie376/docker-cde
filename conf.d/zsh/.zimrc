@@ -13,4 +13,4 @@ zmodule completion
 zmodule zdharma-continuum/fast-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
 zmodule zsh-users/zsh-autosuggestions
-zmodule joke/zim-starship
+zmodule romkatv/powerlevel10k --use degit
