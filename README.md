@@ -5,8 +5,8 @@ Docker 上で動作する、自分用にカスタマイズした CUI ベース�
 ## 起動方法
 
 ```sh
-docker pull mackie376/cde:latest
-docker run -it --rm -e TZ=Asia/Tokyo cde:latest
+docker pull mackie376/studio:latest
+docker run -it --rm -e TZ=Asia/Tokyo studio:latest
 ```
 
 ## インストールされているパッケージ
