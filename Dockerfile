@@ -15,7 +15,6 @@ ARG HEXYL_VER=0.14.0
 ARG LAZYGIT_VER=0.41.0
 ARG NEOVIM_VER=0.9.5
 ARG RIPGREP_VER=14.1.0
-# ARG STARSHIP_VER=1.18.2
 
 ENV \
   TERM=xterm-256color \
@@ -71,7 +70,6 @@ RUN \
   -O https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VER}/lazygit_${LAZYGIT_VER}_Linux_x86_64.tar.gz \
   -O https://github.com/neovim/neovim/releases/download/v${NEOVIM_VER}/nvim-linux64.tar.gz \
   -O https://github.com/BurntSushi/ripgrep/releases/download/${RIPGREP_VER}/ripgrep-${RIPGREP_VER}-x86_64-unknown-linux-musl.tar.gz \
-  # -O https://github.com/starship/starship/releases/download/v${STARSHIP_VER}/starship-x86_64-unknown-linux-musl.tar.gz \
   -o /usr/local/bin/fzf-tmux https://raw.githubusercontent.com/junegunn/fzf/master/bin/fzf-tmux && \
   dpkg -i \
   bat-musl_${BAT_VER}_amd64.deb \
@@ -85,7 +83,6 @@ RUN \
   tar xzvf lazygit_${LAZYGIT_VER}_Linux_x86_64.tar.gz -O lazygit > /usr/local/bin/lazygit && \
   tar xzvf nvim-linux64.tar.gz -C /opt && \
   tar xzvf ripgrep-${RIPGREP_VER}-x86_64-unknown-linux-musl.tar.gz -O ripgrep-${RIPGREP_VER}-x86_64-unknown-linux-musl/rg > /usr/local/bin/rg && \
-  # tar xzvf starship-x86_64-unknown-linux-musl.tar.gz -C /usr/local/bin && \
   rm -f *.deb *.tar.gz *.zip && \
   chown root:root /usr/local/bin/* && \
   chmod +x /usr/local/bin/* && \

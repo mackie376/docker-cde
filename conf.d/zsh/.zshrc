@@ -27,12 +27,6 @@ path=(
   $path
 )
 
-# -- powerlevel10k ---------------------------------------------------------
-
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # -- basic options ---------------------------------------------------------
 
 ## enable vi-mode
@@ -95,9 +89,6 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
   --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
 
-## powerlevel10k
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-
 # -- load 'widgets' --------------------------------------------------------
 
 source "${ZDOTDIR}/widgets/ghq.zsh"
@@ -127,4 +118,3 @@ alias e="$EDITOR"
 
 ## remove duplicate value
 typeset -gU path fpath manpath
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
